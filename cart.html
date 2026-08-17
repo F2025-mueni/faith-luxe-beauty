@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Cart | Faith Luxe Beauty</title>
+
+    <meta
+        name="description"
+        content="View your shopping cart at Faith Luxe Beauty."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span>Faith</span>
+
+            <strong>Luxe Beauty</strong>
+
+        </a>
+
+
+        <nav class="navbar" id="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#featured">
+                Featured
+            </a>
+
+            <a href="index.html#about">
+                About Us
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+                Login
+            </a>
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+            >
+                🛒
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </a>
+
+            <button
+                class="menu-btn"
+                id="menu-btn"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= CART HERO ================= -->
+
+<section class="cart-hero">
+
+    <div class="container">
+
+        <p>
+            FAITH LUXE BEAUTY
+        </p>
+
+        <h1>
+            Your Shopping Cart
+        </h1>
+
+        <span>
+            Review your beauty favorites before checkout.
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CART ================= -->
+
+<main class="cart-section">
+
+    <div class="container">
+
+
+        <!-- EMPTY CART -->
+
+        <div
+            class="empty-cart"
+            id="empty-cart"
+        >
+
+            <div class="empty-cart-icon">
+                🛍️
+            </div>
+
+            <h2>
+                Your cart is empty
+            </h2>
+
+            <p>
+                You haven't added anything to your cart yet.
+            </p>
+
+            <a
+                href="shop.html"
+                class="btn primary-btn"
+            >
+                Continue Shopping
+            </a>
+
+        </div>
+
+
+
+        <!-- CART CONTENT -->
+
+        <div
+            class="cart-layout"
+            id="cart-layout"
+        >
+
+
+            <!-- CART ITEMS -->
+
+            <div class="cart-items-section">
+
+                <div class="cart-items-header">
+
+                    <h2>
+                        Shopping Bag
+                    </h2>
+
+                    <button
+                        type="button"
+                        id="clear-cart"
+                        class="clear-cart-btn"
+                    >
+                        Clear Cart
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="cart-items"
+                    class="cart-items"
+                >
+
+                    <!-- Cart products appear here -->
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="cart-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        KSh 0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="delivery">
+                        Calculated at checkout
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total">
+                        KSh 0
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="checkout.html"
+                    class="checkout-btn"
+                    id="checkout-btn"
+                >
+                    Proceed to Checkout
+                </a>
+
+
+                <a
+                    href="shop.html"
+                    class="continue-shopping"
+                >
+                    ← Continue Shopping
+                </a>
+
+
+                <div class="secure-checkout">
+
+                    🔒
+
+                    <span>
+                        Secure checkout
+                    </span>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= WHY SHOP ================= -->
+
+<section class="cart-benefits">
+
+    <div class="container benefits-grid">
+
+
+        <div class="cart-benefit">
+
+            <span>
+                🚚
+            </span>
+
+            <div>
+
+                <strong>
+                    Convenient Delivery
+                </strong>
+
+                <p>
+                    We make getting your beauty products easy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-benefit">
+
+            <span>
+                💳
+            </span>
+
+            <div>
+
+                <strong>
+                    Secure Payments
+                </strong>
+
+                <p>
+                    Safe and convenient payment options.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-benefit">
+
+            <span>
+                ✨
+            </span>
+
+            <div>
+
+                <strong>
+                    Quality Products
+                </strong>
+
+                <p>
+                    Beauty products selected with care.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
+                Faith Luxe Beauty
+            </a>
+
+            <p>
+                Elevate Your Beauty. Embrace Your Luxe.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="index.html#about">
+                About Us
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <a href="cart.html">
+                My Cart
+            </a>
+
+            <a href="login.html">
+                My Account
+            </a>
+
+            <a href="#">
+                Delivery Information
+            </a>
+
+            <a href="#">
+                Returns & Refunds
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                📍 Chuka, Kenya
+            </p>
+
+            <p>
+                📞 +254717311417
+            </p>
+
+            <p>
+                ✉️ hello@faithluxebeauty.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            ©
+
+            <span id="current-year"></span>
+
+            Faith Luxe Beauty.
+
+            All rights reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20need%20help%20with%20my%20order."
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Faith Luxe Beauty on WhatsApp"
+>
+
+    <span class="whatsapp-icon">
+        💬
+    </span>
+
+    <span class="whatsapp-text">
+        Chat With Us
+    </span>
+
+</a>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+/* =========================
+   MOBILE MENU
+   ========================= */
+
+const menuBtn =
+    document.getElementById("menu-btn");
+
+const navbar =
+    document.getElementById("navbar");
+
+
+if (menuBtn && navbar) {
+
+    menuBtn.addEventListener(
+        "click",
+        () => {
+
+            navbar.classList.toggle("show");
+
+        }
+    );
+
+}
+
+
+
+/* =========================
+   CURRENT YEAR
+   ========================= */
+
+document.getElementById(
+    "current-year"
+).textContent =
+    new Date().getFullYear();
+
+
+
+/* =========================
+   CART ELEMENTS
+   ========================= */
+
+const cartItems =
+    document.getElementById("cart-items");
+
+const cartLayout =
+    document.getElementById("cart-layout");
+
+const emptyCart =
+    document.getElementById("empty-cart");
+
+const subtotalElement =
+    document.getElementById("subtotal");
+
+const totalElement =
+    document.getElementById("total");
+
+const cartCount =
+    document.getElementById("cart-count");
+
+
+
+/* =========================
+   GET CART
+   ========================= */
+
+function getCart() {
+
+    return JSON.parse(
+        localStorage.getItem(
+            "faithLuxeCart"
+        )
+    ) || [];
+
+}
+
+
+
+/* =========================
+   SAVE CART
+   ========================= */
+
+function saveCart(cart) {
+
+    localStorage.setItem(
+        "faithLuxeCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+
+/* =========================
+   DISPLAY CART
+   ========================= */
+
+function displayCart() {
+
+    const cart =
+        getCart();
+
+
+    /*
+       Check if cart is empty.
+    */
+
+    if (cart.length === 0) {
+
+        emptyCart.style.display =
+            "block";
+
+        cartLayout.style.display =
+            "none";
+
+        cartCount.textContent =
+            "0";
+
+        return;
+
+    }
+
+
+    emptyCart.style.display =
+        "none";
+
+    cartLayout.style.display =
+        "grid";
+
+
+    cartItems.innerHTML =
+        "";
+
+
+    let subtotal = 0;
+
+    let itemCount = 0;
+
+
+
+    cart.forEach(
+        (item, index) => {
+
+
+            const itemTotal =
+                item.price *
+                item.quantity;
+
+
+            subtotal +=
+                itemTotal;
+
+
+            itemCount +=
+                item.quantity;
+
+
+
+            const cartItem =
+                document.createElement(
+                    "article"
+                );
+
+
+            cartItem.className =
+                "cart-item";
+
+
+            cartItem.innerHTML = `
+
+                <div class="cart-product-image">
+
+                    <span>
+                        ${item.category || "Beauty"}
+                    </span>
+
+                </div>
+
+
+                <div class="cart-product-info">
+
+                    <p class="cart-product-category">
+                        ${item.category || "Beauty"}
+                    </p>
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p class="cart-product-price">
+                        KSh ${item.price.toLocaleString()}
+                    </p>
+
+
+                    <div class="cart-item-actions">
+
+
+                        <div class="cart-quantity">
+
+                            <button
+                                type="button"
+                                onclick="changeQuantity(${index}, -1)"
+                            >
+                                −
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button
+                                type="button"
+                                onclick="changeQuantity(${index}, 1)"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="remove-item"
+                            onclick="removeItem(${index})"
+                        >
+                            Remove
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-item-total">
+
+                    KSh ${itemTotal.toLocaleString()}
+
+                </div>
+
+            `;
+
+
+            cartItems.appendChild(
+                cartItem
+            );
+
+        }
+    );
+
+
+
+    /* =========================
+       TOTALS
+       ========================= */
+
+    subtotalElement.textContent =
+        `KSh ${subtotal.toLocaleString()}`;
+
+
+    totalElement.textContent =
+        `KSh ${subtotal.toLocaleString()}`;
+
+
+    cartCount.textContent =
+        itemCount;
+
+}
+
+
+
+/* =========================
+   CHANGE QUANTITY
+   ========================= */
+
+function changeQuantity(
+    index,
+    change
+) {
+
+    const cart =
+        getCart();
+
+
+    if (!cart[index]) {
+        return;
+    }
+
+
+    cart[index].quantity +=
+        change;
+
+
+    /*
+       Don't allow quantity below 1.
+    */
+
+    if (
+        cart[index].quantity <= 0
+    ) {
+
+        cart.splice(index, 1);
+
+    }
+
+
+    saveCart(cart);
+
+    displayCart();
+
+}
+
+
+
+/* =========================
+   REMOVE ITEM
+   ========================= */
+
+function removeItem(index) {
+
+    const cart =
+        getCart();
+
+
+    if (!cart[index]) {
+        return;
+    }
+
+
+    cart.splice(
+        index,
+        1
+    );
+
+
+    saveCart(cart);
+
+    displayCart();
+
+}
+
+
+
+/* =========================
+   CLEAR CART
+   ========================= */
+
+document.getElementById(
+    "clear-cart"
+).addEventListener(
+    "click",
+    () => {
+
+        const cart =
+            getCart();
+
+
+        if (cart.length === 0) {
+            return;
+        }
+
+
+        const confirmed =
+            confirm(
+                "Are you sure you want to clear your cart?"
+            );
+
+
+        if (!confirmed) {
+            return;
+        }
+
+
+        localStorage.removeItem(
+            "faithLuxeCart"
+        );
+
+
+        displayCart();
+
+    }
+);
+
+
+
+/* =========================
+   INITIALIZE
+   ========================= */
+
+displayCart();
+
+
+</script>
+
+</body>
+
+</html>

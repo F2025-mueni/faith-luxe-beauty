@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faith Luxe Beauty | Elevate Your Beauty</title>
+
+    <meta
+        name="description"
+        content="Faith Luxe Beauty - Discover premium beauty, skincare, makeup and hair products."
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span>Faith</span>
+                <strong>Luxe Beauty</strong>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#featured">Featured</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="nav-actions">
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="cart.html" class="cart-btn">
+                    🛒
+                    <span id="cart-count">0</span>
+                </a>
+
+                <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <p class="hero-small-title">
+                    WELCOME TO FAITH LUXE BEAUTY
+                </p>
+
+                <h1>
+                    Elevate Your Beauty.
+                    <span>Embrace Your Luxe.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover carefully selected beauty products designed
+                    to help you look beautiful, feel confident and shine
+                    every day.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="shop.html" class="btn primary-btn">
+                        Shop Now
+                    </a>
+
+                    <a href="#categories" class="btn secondary-btn">
+                        Explore Beauty
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="hero-image-box">
+                    <span>FAITH</span>
+                    <strong>LUXE</strong>
+                    <small>BEAUTY</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+ <!-- ================= CATEGORIES ================= -->
+<section class="categories-section" id="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>SHOP BY CATEGORY</p>
+
+            <h2>Find Your Beauty Essentials</h2>
+
+            <span>
+                Everything you need to create your perfect beauty routine.
+            </span>
+
+        </div>
+
+        <div class="categories-grid">
+
+            <!-- Makeup -->
+            <a href="shop.html?category=makeup" class="category-card">
+
+                <div class="category-icon">
+                    💄
+                </div>
+
+                <h3>Makeup</h3>
+
+                <p>
+                    Lipsticks, foundations, eyeshadow and more.
+                </p>
+
+            </a>
+
+
+            <!-- Skincare -->
+            <a href="shop.html?category=skincare" class="category-card">
+
+                <div class="category-icon">
+                    ✨
+                </div>
+
+                <h3>Skincare</h3>
+
+                <p>
+                    Give your skin the care it deserves.
+                </p>
+
+            </a>
+
+
+            <!-- Hair Care -->
+            <a href="shop.html?category=hair" class="category-card">
+
+                <div class="category-icon">
+                    💇🏽‍♀️
+                </div>
+
+                <h3>Hair Care</h3>
+
+                <p>
+                    Products for beautiful and healthy hair.
+                </p>
+
+            </a>
+
+
+            <!-- Fragrances -->
+            <a href="shop.html?category=fragrance" class="category-card">
+
+                <div class="category-icon">
+                    🌸
+                </div>
+
+                <h3>Fragrances</h3>
+
+                <p>
+                    Beautiful scents for every occasion.
+                </p>
+
+            </a>
+
+
+            <!-- Accessories -->
+            <a href="shop.html?category=accessories" class="category-card">
+
+                <div class="category-icon">
+                    💍
+                </div>
+
+                <h3>Accessories</h3>
+
+                <p>
+                    Beautiful accessories to complete your look.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+    <section class="featured-section" id="featured">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>OUR COLLECTION</p>
+
+                <h2>
+                    Featured Beauty Products
+                </h2>
+
+                <span>
+                    Discover some of our most-loved beauty essentials.
+                </span>
+
+            </div>
+
+
+            <!-- Products will be loaded from Firebase -->
+            <div class="products-grid" id="featured-products">
+
+                <!-- JavaScript will load products here -->
+
+                <div class="product-loading">
+                    Loading products...
+                </div>
+
+            </div>
+
+
+            <div class="view-all-container">
+
+                <a href="shop.html" class="btn primary-btn">
+                    View All Products
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROMO SECTION ================= -->
+    <section class="promo-section">
+
+        <div class="container promo-content">
+
+            <div>
+
+                <p class="promo-small">
+                    YOUR BEAUTY, YOUR CONFIDENCE
+                </p>
+
+                <h2>
+                    Beauty That Makes You Feel
+                    <span>Extraordinary.</span>
+                </h2>
+
+                <p>
+                    Explore our collection and find products
+                    that make you feel confident and beautiful.
+                </p>
+
+            </div>
+
+            <a href="shop.html" class="btn light-btn">
+                Shop Collection
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about-section" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-image">
+
+                <div class="about-logo">
+                    FAITH
+                    <strong>LUXE</strong>
+                    BEAUTY
+                </div>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p class="section-label">
+                    ABOUT FAITH LUXE BEAUTY
+                </p>
+
+                <h2>
+                    Beauty With a Touch of Luxe
+                </h2>
+
+                <p>
+                    At Faith Luxe Beauty, we believe beauty is more than
+                    appearance. It is confidence, self-expression and
+                    feeling good in your own skin.
+                </p>
+
+                <p>
+                    We bring you carefully selected beauty products
+                    so you can create a beauty routine that is uniquely
+                    yours.
+                </p>
+
+                <a href="#contact" class="btn primary-btn">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="features-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>WHY FAITH LUXE BEAUTY</p>
+
+                <h2>
+                    Beauty Shopping Made Easy
+                </h2>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🚚
+                    </div>
+
+                    <h3>Fast Delivery</h3>
+
+                    <p>
+                        Get your beauty essentials delivered conveniently.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💎
+                    </div>
+
+                    <h3>Quality Products</h3>
+
+                    <p>
+                        Carefully selected products for your beauty needs.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔒
+                    </div>
+
+                    <h3>Secure Shopping</h3>
+
+                    <p>
+                        Shop confidently with secure checkout.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💬
+                    </div>
+
+                    <h3>We're Here to Help</h3>
+
+                    <p>
+                        Have a question? Chat with us on WhatsApp.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter-section">
+
+        <div class="container newsletter-content">
+
+            <p>
+                STAY IN THE GLOW
+            </p>
+
+            <h2>
+                Join the Faith Luxe Beauty Family
+            </h2>
+
+            <span>
+                Get beauty tips, new product updates and special offers.
+            </span>
+
+
+            <form id="newsletter-form" class="newsletter-form">
+
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+
+        <div class="container footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Faith Luxe Beauty
+                </a>
+
+                <p>
+                    Elevate Your Beauty. Embrace Your Luxe.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        Instagram
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        Facebook
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About Us</a>
+
+            </div>
+
+
+            <!-- Customer Service -->
+            <div class="footer-column">
+
+                <h3>Customer Care</h3>
+
+                <a href="cart.html">My Cart</a>
+                <a href="login.html">My Account</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Returns & Refunds</a>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    📍 Chuka, Kenya
+                </p>
+
+                <p>
+                    📞 +254 717311417
+                </p>
+
+                <p>
+                    ✉️ hello@faithluxebeauty.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="current-year"></span>
+                Faith Luxe Beauty. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= WHATSAPP BUTTON ================= -->
+
+    <!--
+        Replace 254XXXXXXXXX with your actual WhatsApp number.
+        Do not include the + sign or spaces.
+    -->
+
+    <a
+        href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20would%20like%20some%20assistance."
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Faith Luxe Beauty on WhatsApp"
+    >
+
+        <span class="whatsapp-icon">
+            💬
+        </span>
+
+        <span class="whatsapp-text">
+            Chat With Us
+        </span>
+
+    </a>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile navigation
+        const menuBtn = document.getElementById("menu-btn");
+        const navbar = document.getElementById("navbar");
+
+        if (menuBtn && navbar) {
+
+            menuBtn.addEventListener("click", () => {
+                navbar.classList.toggle("show");
+            });
+
+        }
+
+
+        // Current year
+        const currentYear = document.getElementById("current-year");
+
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+
+
+        // Newsletter
+        const newsletterForm =
+            document.getElementById("newsletter-form");
+
+        if (newsletterForm) {
+
+            newsletterForm.addEventListener("submit", (event) => {
+
+                event.preventDefault();
+
+                const email =
+                    document.getElementById("newsletter-email").value;
+
+                alert(
+                    `Thank you for subscribing, ${email}!`
+                );
+
+                newsletterForm.reset();
+
+            });
+
+        }
+
+
+        // Temporary cart count
+        // Later this will be connected to Firebase/JavaScript cart logic.
+        const cartCount =
+            document.getElementById("cart-count");
+
+        if (cartCount) {
+            cartCount.textContent = "0";
+        }
+
+    </script>
+
+</body>
+</html>

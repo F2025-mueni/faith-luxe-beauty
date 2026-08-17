@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | Faith Luxe Beauty</title>
+
+    <meta
+        name="description"
+        content="Login or create an account at Faith Luxe Beauty."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span>Faith</span>
+
+            <strong>Luxe Beauty</strong>
+
+        </a>
+
+
+        <nav class="navbar" id="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#about">
+                About Us
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+            >
+                🛒
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-btn"
+                id="menu-btn"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= LOGIN PAGE ================= -->
+
+<main class="auth-page">
+
+    <div class="auth-container">
+
+
+        <!-- ================= BRAND SIDE ================= -->
+
+        <section class="auth-brand">
+
+            <div class="auth-brand-content">
+
+                <p class="auth-eyebrow">
+                    WELCOME TO
+                </p>
+
+                <h1>
+                    Faith
+                    <span>Luxe Beauty</span>
+                </h1>
+
+                <p class="auth-tagline">
+                    Elevate Your Beauty.
+                    Embrace Your Luxe.
+                </p>
+
+                <div class="auth-decoration">
+                    ✦
+                </div>
+
+                <p class="auth-description">
+                    Create your account to enjoy a
+                    beautiful and convenient shopping
+                    experience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= AUTH FORM ================= -->
+
+        <section class="auth-card">
+
+
+            <!-- LOGIN -->
+
+            <div
+                class="auth-form-container"
+                id="login-container"
+            >
+
+                <div class="auth-heading">
+
+                    <h2>
+                        Welcome Back
+                    </h2>
+
+                    <p>
+                        Login to your Faith Luxe Beauty account.
+                    </p>
+
+                </div>
+
+
+                <form id="login-form">
+
+
+                    <div class="form-group">
+
+                        <label for="login-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="login-password">
+                                Password
+                            </label>
+
+                            <a href="#" id="forgot-password">
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="login-password"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="remember-me">
+
+                        <input
+                            type="checkbox"
+                            id="remember-me"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                    >
+                        Login
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="google-btn"
+                    id="google-login"
+                >
+
+                    <span>
+                        G
+                    </span>
+
+                    Continue with Google
+
+                </button>
+
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="show-register"
+                    >
+                        Create Account
+                    </button>
+
+                </p>
+
+
+                <p
+                    class="auth-message"
+                    id="login-message"
+                ></p>
+
+            </div>
+
+
+
+            <!-- REGISTER -->
+
+            <div
+                class="auth-form-container hidden"
+                id="register-container"
+            >
+
+                <div class="auth-heading">
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p>
+                        Join the Faith Luxe Beauty family.
+                    </p>
+
+                </div>
+
+
+                <form id="register-form">
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="register-first-name">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="register-first-name"
+                                placeholder="First name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="register-last-name">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="register-last-name"
+                                placeholder="Last name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="register-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="register-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="register-phone"
+                            placeholder="+254 7XX XXX XXX"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="register-password">
+                            Password
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="register-password"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="confirm-password"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="register-terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the Terms and Conditions
+                            and Privacy Policy.
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                    >
+                        Create Account
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="google-btn"
+                    id="google-register"
+                >
+
+                    <span>
+                        G
+                    </span>
+
+                    Continue with Google
+
+                </button>
+
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="show-login"
+                    >
+                        Login
+                    </button>
+
+                </p>
+
+
+                <p
+                    class="auth-message"
+                    id="register-message"
+                ></p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
+                Faith Luxe Beauty
+            </a>
+
+            <p>
+                Elevate Your Beauty. Embrace Your Luxe.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <a href="shop.html">
+                All Products
+            </a>
+
+            <a href="shop.html">
+                Makeup
+            </a>
+
+            <a href="shop.html">
+                Skincare
+            </a>
+
+            <a href="shop.html">
+                Accessories
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <a href="cart.html">
+                My Cart
+            </a>
+
+            <a href="checkout.html">
+                Checkout
+            </a>
+
+            <a href="#">
+                Delivery
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Chuka, Kenya
+            </p>
+
+            <p>
+                📞 +254717311417
+            </p>
+
+            <p>
+                ✉️ hello@faithluxebeauty.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            ©
+
+            <span id="current-year"></span>
+
+            Faith Luxe Beauty.
+
+            All rights reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20need%20help."
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Faith Luxe Beauty on WhatsApp"
+>
+
+    <span class="whatsapp-icon">
+        💬
+    </span>
+
+    <span class="whatsapp-text">
+        Chat With Us
+    </span>
+
+</a>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    const menuBtn =
+        document.getElementById("menu-btn");
+
+    const navbar =
+        document.getElementById("navbar");
+
+
+    if (menuBtn && navbar) {
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                navbar.classList.toggle("show");
+
+            }
+        );
+
+    }
+
+
+    /* =========================
+       YEAR
+       ========================= */
+
+    const currentYear =
+        document.getElementById("current-year");
+
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =========================
+       CART COUNT
+       ========================= */
+
+    function updateCartCount() {
+
+        const cart =
+            JSON.parse(
+                localStorage.getItem(
+                    "faithLuxeCart"
+                )
+            ) || [];
+
+
+        const count =
+            cart.reduce(
+                (total, item) =>
+                    total + item.quantity,
+                0
+            );
+
+
+        const cartCount =
+            document.getElementById(
+                "cart-count"
+            );
+
+
+        if (cartCount) {
+
+            cartCount.textContent =
+                count;
+
+        }
+
+    }
+
+
+    updateCartCount();
+
+
+    /* =========================
+       SWITCH LOGIN / REGISTER
+       ========================= */
+
+    const loginContainer =
+        document.getElementById(
+            "login-container"
+        );
+
+    const registerContainer =
+        document.getElementById(
+            "register-container"
+        );
+
+
+    const showRegister =
+        document.getElementById(
+            "show-register"
+        );
+
+
+    const showLogin =
+        document.getElementById(
+            "show-login"
+        );
+
+
+    if (showRegister) {
+
+        showRegister.addEventListener(
+            "click",
+            () => {
+
+                loginContainer.classList.add(
+                    "hidden"
+                );
+
+                registerContainer.classList.remove(
+                    "hidden"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (showLogin) {
+
+        showLogin.addEventListener(
+            "click",
+            () => {
+
+                registerContainer.classList.add(
+                    "hidden"
+                );
+
+                loginContainer.classList.remove(
+                    "hidden"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================
+       SHOW / HIDE PASSWORD
+       ========================= */
+
+    const passwordButtons =
+        document.querySelectorAll(
+            ".toggle-password"
+        );
+
+
+    passwordButtons.forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const targetId =
+                        button.dataset.target;
+
+
+                    const input =
+                        document.getElementById(
+                            targetId
+                        );
+
+
+                    if (
+                        input.type ===
+                        "password"
+                    ) {
+
+                        input.type =
+                            "text";
+
+                        button.textContent =
+                            "🙈";
+
+                    } else {
+
+                        input.type =
+                            "password";
+
+                        button.textContent =
+                            "👁";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+<!-- FIREBASE AUTHENTICATION -->
+
+<script
+    type="module"
+    src="firebase-auth.js"
+></script>
+
+</body>
+
+</html>

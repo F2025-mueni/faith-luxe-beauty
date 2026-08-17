@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | Faith Luxe Beauty</title>
+
+    <meta
+        name="description"
+        content="Shop makeup, skincare, hair care, fragrances and accessories at Faith Luxe Beauty."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span>Faith</span>
+                <strong>Luxe Beauty</strong>
+            </a>
+
+            <nav class="navbar" id="navbar">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html" class="active">
+                    Shop
+                </a>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+                <a href="index.html#featured">
+                    Featured
+                </a>
+
+                <a href="index.html#about">
+                    About Us
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="cart.html" class="cart-btn">
+                    🛒
+                    <span id="cart-count">0</span>
+                </a>
+
+                <button
+                    class="menu-btn"
+                    id="menu-btn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SHOP HERO ================= -->
+
+    <section class="shop-hero">
+
+        <div class="container">
+
+            <p>
+                FAITH LUXE BEAUTY
+            </p>
+
+            <h1>
+                Shop Our Beauty Collection
+            </h1>
+
+            <span>
+                Discover products selected to elevate your beauty routine.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SHOP ================= -->
+
+    <main class="shop-section">
+
+        <div class="container">
+
+            <!-- Search & Sort -->
+
+            <div class="shop-toolbar">
+
+                <div class="search-box">
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Search beauty products..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        id="search-btn"
+                        aria-label="Search"
+                    >
+                        🔍
+                    </button>
+
+                </div>
+
+
+                <div class="sort-box">
+
+                    <label for="sort-products">
+                        Sort:
+                    </label>
+
+                    <select id="sort-products">
+
+                        <option value="default">
+                            Featured
+                        </option>
+
+                        <option value="price-low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="price-high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="name">
+                            Name: A-Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Category Filters -->
+
+            <div class="category-filters" id="category-filters">
+
+                <button
+                    class="category-filter active"
+                    data-category="all"
+                >
+                    All Products
+                </button>
+
+                <button
+                    class="category-filter"
+                    data-category="makeup"
+                >
+                    Makeup
+                </button>
+
+                <button
+                    class="category-filter"
+                    data-category="skincare"
+                >
+                    Skincare
+                </button>
+
+                <button
+                    class="category-filter"
+                    data-category="hair"
+                >
+                    Hair Care
+                </button>
+
+                <button
+                    class="category-filter"
+                    data-category="fragrance"
+                >
+                    Fragrances
+                </button>
+
+                <button
+                    class="category-filter"
+                    data-category="accessories"
+                >
+                    Accessories
+                </button>
+
+            </div>
+
+
+            <!-- Product Count -->
+
+            <div class="products-header">
+
+                <p>
+                    Showing
+                    <strong id="product-count">0</strong>
+                    products
+                </p>
+
+            </div>
+
+
+            <!-- Products -->
+
+            <div
+                class="products-grid shop-products"
+                id="products-container"
+            >
+
+                <!-- Products will be loaded from Firebase -->
+
+                <div class="product-loading">
+
+                    <div class="loading-spinner"></div>
+
+                    <p>
+                        Loading products...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- No Products -->
+
+            <div
+                class="no-products"
+                id="no-products"
+                style="display: none;"
+            >
+
+                <div class="no-products-icon">
+                    🔍
+                </div>
+
+                <h2>
+                    No Products Found
+                </h2>
+
+                <p>
+                    Try another search or choose a different category.
+                </p>
+
+                <button
+                    class="btn primary-btn"
+                    id="clear-filters"
+                >
+                    View All Products
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= PROMO ================= -->
+
+    <section class="promo-section">
+
+        <div class="container promo-content">
+
+            <div>
+
+                <p class="promo-small">
+                    FAITH LUXE BEAUTY
+                </p>
+
+                <h2>
+                    Your Beauty.
+                    <span>Your Luxe.</span>
+                </h2>
+
+                <p>
+                    Find your new beauty favorites today.
+                </p>
+
+            </div>
+
+            <a
+                href="index.html"
+                class="btn light-btn"
+            >
+                Back Home
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Faith Luxe Beauty
+                </a>
+
+                <p>
+                    Elevate Your Beauty. Embrace Your Luxe.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="index.html#about">
+                    About Us
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer Care
+                </h3>
+
+                <a href="cart.html">
+                    My Cart
+                </a>
+
+                <a href="login.html">
+                    My Account
+                </a>
+
+                <a href="#">
+                    Delivery Information
+                </a>
+
+                <a href="#">
+                    Returns & Refunds
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📍 Chuka, Kenya
+                </p>
+
+                <p>
+                    📞 +254 717311417
+                </p>
+
+                <p>
+                    ✉️ hello@faithluxebeauty.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="current-year"></span>
+                Faith Luxe Beauty. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= WHATSAPP ================= -->
+
+    <a
+        href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20would%20like%20some%20assistance."
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Faith Luxe Beauty on WhatsApp"
+    >
+
+        <span class="whatsapp-icon">
+            💬
+        </span>
+
+        <span class="whatsapp-text">
+            Chat With Us
+        </span>
+
+    </a>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+           ========================= */
+
+        const menuBtn =
+            document.getElementById("menu-btn");
+
+        const navbar =
+            document.getElementById("navbar");
+
+        if (menuBtn && navbar) {
+
+            menuBtn.addEventListener("click", () => {
+
+                navbar.classList.toggle("show");
+
+            });
+
+        }
+
+
+        /* =========================
+           CURRENT YEAR
+           ========================= */
+
+        const currentYear =
+            document.getElementById("current-year");
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =========================
+           TEMPORARY PRODUCTS
+           ========================= */
+
+        /*
+            Firebase will replace this section.
+
+            These are only temporary products so
+            we can test the shop page layout.
+        */
+
+        const products = [
+
+            {
+                id: 1,
+                name: "Luxury Lip Gloss",
+                category: "makeup",
+                price: 1200
+            },
+
+            {
+                id: 2,
+                name: "Glow Face Serum",
+                category: "skincare",
+                price: 1800
+            },
+
+            {
+                id: 3,
+                name: "Hair Repair Oil",
+                category: "hair",
+                price: 1500
+            },
+
+            {
+                id: 4,
+                name: "Luxe Rose Perfume",
+                category: "fragrance",
+                price: 2500
+            },
+
+            {
+                id: 5,
+                name: "Elegant Beauty Bag",
+                category: "accessories",
+                price: 2200
+            },
+
+            {
+                id: 6,
+                name: "Premium Makeup Brush Set",
+                category: "accessories",
+                price: 1900
+            }
+
+        ];
+
+
+        /* =========================
+           ELEMENTS
+           ========================= */
+
+        const productsContainer =
+            document.getElementById("products-container");
+
+        const productCount =
+            document.getElementById("product-count");
+
+        const searchInput =
+            document.getElementById("product-search");
+
+        const sortSelect =
+            document.getElementById("sort-products");
+
+        const categoryButtons =
+            document.querySelectorAll(".category-filter");
+
+        const noProducts =
+            document.getElementById("no-products");
+
+        const clearFilters =
+            document.getElementById("clear-filters");
+
+
+        let selectedCategory = "all";
+
+
+        /* =========================
+           DISPLAY PRODUCTS
+           ========================= */
+
+        function displayProducts() {
+
+            let filteredProducts =
+                [...products];
+
+
+            /* Category */
+
+            if (selectedCategory !== "all") {
+
+                filteredProducts =
+                    filteredProducts.filter(product =>
+
+                        product.category === selectedCategory
+
+                    );
+
+            }
+
+
+            /* Search */
+
+            const searchTerm =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+            if (searchTerm) {
+
+                filteredProducts =
+                    filteredProducts.filter(product =>
+
+                        product.name
+                            .toLowerCase()
+                            .includes(searchTerm)
+
+                    );
+
+            }
+
+
+            /* Sort */
+
+            const sortValue =
+                sortSelect.value;
+
+
+            if (sortValue === "price-low") {
+
+                filteredProducts.sort(
+                    (a, b) => a.price - b.price
+                );
+
+            }
+
+
+            if (sortValue === "price-high") {
+
+                filteredProducts.sort(
+                    (a, b) => b.price - a.price
+                );
+
+            }
+
+
+            if (sortValue === "name") {
+
+                filteredProducts.sort(
+                    (a, b) =>
+                        a.name.localeCompare(b.name)
+                );
+
+            }
+
+
+            /* Count */
+
+            productCount.textContent =
+                filteredProducts.length;
+
+
+            /* No products */
+
+            if (filteredProducts.length === 0) {
+
+                productsContainer.innerHTML = "";
+
+                noProducts.style.display = "block";
+
+                return;
+
+            }
+
+
+            noProducts.style.display = "none";
+
+
+            /* Render */
+
+            productsContainer.innerHTML =
+                filteredProducts.map(product => `
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <span>
+                                ${product.category}
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-category">
+                                ${product.category}
+                            </p>
+
+                            <h3>
+                                ${product.name}
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    KSh ${product.price.toLocaleString()}
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    onclick="addToCart(${product.id})"
+                                >
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                `).join("");
+
+        }
+
+
+        /* =========================
+           CATEGORY FILTER
+           ========================= */
+
+        categoryButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                categoryButtons.forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+                button.classList.add("active");
+
+                selectedCategory =
+                    button.dataset.category;
+
+                displayProducts();
+
+            });
+
+        });
+
+
+        /* =========================
+           SEARCH
+           ========================= */
+
+        searchInput.addEventListener(
+            "input",
+            displayProducts
+        );
+
+
+        /* =========================
+           SORT
+           ========================= */
+
+        sortSelect.addEventListener(
+            "change",
+            displayProducts
+        );
+
+
+        /* =========================
+           CLEAR FILTERS
+           ========================= */
+
+        clearFilters.addEventListener(
+            "click",
+            () => {
+
+                selectedCategory = "all";
+
+                searchInput.value = "";
+
+                sortSelect.value = "default";
+
+                categoryButtons.forEach(button => {
+
+                    button.classList.remove("active");
+
+                });
+
+                categoryButtons[0].classList.add("active");
+
+                displayProducts();
+
+            }
+        );
+
+
+        /* =========================
+           CART
+           ========================= */
+
+        function addToCart(productId) {
+
+            const product =
+                products.find(
+                    item => item.id === productId
+                );
+
+            if (!product) return;
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("faithLuxeCart")
+                ) || [];
+
+
+            const existingProduct =
+                cart.find(
+                    item => item.id === productId
+                );
+
+
+            if (existingProduct) {
+
+                existingProduct.quantity += 1;
+
+            } else {
+
+                cart.push({
+
+                    id: product.id,
+
+                    name: product.name,
+
+                    price: product.price,
+
+                    category: product.category,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            localStorage.setItem(
+                "faithLuxeCart",
+                JSON.stringify(cart)
+            );
+
+
+            updateCartCount();
+
+
+            alert(
+                `${product.name} added to your cart.`
+            );
+
+        }
+
+
+        /* =========================
+           CART COUNT
+           ========================= */
+
+        function updateCartCount() {
+
+            const cart =
+                JSON.parse(
+                    localStorage.getItem("faithLuxeCart")
+                ) || [];
+
+
+            const count =
+                cart.reduce(
+                    (total, item) =>
+                        total + item.quantity,
+                    0
+                );
+
+
+            document.getElementById(
+                "cart-count"
+            ).textContent = count;
+
+        }
+
+
+        /* =========================
+           INITIALIZE
+           ========================= */
+
+        updateCartCount();
+
+        displayProducts();
+
+    </script>
+
+</body>
+</html>
