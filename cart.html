@@ -14,18 +14,29 @@
 
     <meta
         name="description"
-        content="View your shopping cart at Faith Luxe Beauty."
+        content="Review your beauty favorites and complete your order at Faith Luxe Beauty."
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
@@ -33,22 +44,27 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header class="header">
 
     <div class="container nav-container">
 
-        <a href="index.html" class="logo">
-
+        <a
+            href="index.html"
+            class="logo"
+        >
             <span>Faith</span>
-
             <strong>Luxe Beauty</strong>
-
         </a>
 
 
-        <nav class="navbar" id="navbar">
+        <nav
+            class="navbar"
+            id="navbar"
+        >
 
             <a href="index.html">
                 Home
@@ -89,7 +105,9 @@
             <a
                 href="cart.html"
                 class="cart-btn"
+                aria-label="Shopping cart"
             >
+
                 🛒
 
                 <span id="cart-count">
@@ -98,7 +116,9 @@
 
             </a>
 
+
             <button
+                type="button"
                 class="menu-btn"
                 id="menu-btn"
                 aria-label="Open menu"
@@ -114,7 +134,9 @@
 
 
 
-<!-- ================= CART HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section class="cart-hero">
 
@@ -125,11 +147,11 @@
         </p>
 
         <h1>
-            Your Shopping Cart
+            Your Shopping Bag
         </h1>
 
         <span>
-            Review your beauty favorites before checkout.
+            Beautiful choices, thoughtfully selected for you.
         </span>
 
     </div>
@@ -138,14 +160,18 @@
 
 
 
-<!-- ================= CART ================= -->
+<!-- ==================================================
+     MAIN CART
+================================================== -->
 
 <main class="cart-section">
 
     <div class="container">
 
 
-        <!-- EMPTY CART -->
+        <!-- ==========================================
+             EMPTY CART
+        ========================================== -->
 
         <div
             class="empty-cart"
@@ -161,7 +187,7 @@
             </h2>
 
             <p>
-                You haven't added anything to your cart yet.
+                Discover something beautiful and add it to your bag.
             </p>
 
             <a
@@ -175,7 +201,9 @@
 
 
 
-        <!-- CART CONTENT -->
+        <!-- ==========================================
+             CART CONTENT
+        ========================================== -->
 
         <div
             class="cart-layout"
@@ -183,15 +211,27 @@
         >
 
 
-            <!-- CART ITEMS -->
+            <!-- ======================================
+                 LEFT SIDE
+            ====================================== -->
 
-            <div class="cart-items-section">
+            <div class="cart-main">
+
 
                 <div class="cart-items-header">
 
-                    <h2>
-                        Shopping Bag
-                    </h2>
+                    <div>
+
+                        <p class="cart-eyebrow">
+                            YOUR SELECTION
+                        </p>
+
+                        <h2>
+                            Shopping Bag
+                        </h2>
+
+                    </div>
+
 
                     <button
                         type="button"
@@ -204,22 +244,234 @@
                 </div>
 
 
+
+                <!-- ==================================
+                     FREE DELIVERY
+                ================================== -->
+
+                <div
+                    class="free-delivery-box"
+                    id="free-delivery-box"
+                >
+
+                    <div class="free-delivery-top">
+
+                        <span>
+                            🚚
+                        </span>
+
+                        <div>
+
+                            <strong id="free-delivery-message">
+                                Add more to unlock FREE delivery
+                            </strong>
+
+                            <p>
+                                Enjoy complimentary delivery on qualifying orders.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="free-delivery-track">
+
+                        <div
+                            class="free-delivery-progress"
+                            id="free-delivery-progress"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==================================
+                     CART ITEMS
+                ================================== -->
+
                 <div
                     id="cart-items"
                     class="cart-items"
                 >
+                </div>
 
-                    <!-- Cart products appear here -->
+
+
+                <!-- ==================================
+                     CART REASSURANCE
+                ================================== -->
+
+                <div class="cart-reassurance">
+
+                    <div class="reassurance-item">
+
+                        <span>
+                            🔒
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Secure checkout
+                            </strong>
+
+                            <p>
+                                Your order information is protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reassurance-item">
+
+                        <span>
+                            📦
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Fast Kenya delivery
+                            </strong>
+
+                            <p>
+                                Convenient delivery across Kenya.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reassurance-item">
+
+                        <span>
+                            💳
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                M-Pesa accepted
+                            </strong>
+
+                            <p>
+                                Easy and convenient payment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reassurance-item">
+
+                        <span>
+                            ↩️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Easy returns
+                            </strong>
+
+                            <p>
+                                Shop with confidence.
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
+
+
+
+                <!-- ==================================
+                     RECOMMENDATIONS
+                ================================== -->
+
+                <section
+                    class="cart-recommendations"
+                    id="recommendations-section"
+                >
+
+                    <div class="cart-subheading">
+
+                        <p>
+                            CURATED FOR YOU
+                        </p>
+
+                        <h2>
+                            You May Also Like
+                        </h2>
+
+                        <span>
+                            Complete your beauty collection with these favorites.
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="recommendation-grid"
+                        id="recommendation-grid"
+                    >
+                    </div>
+
+                </section>
+
+
+
+                <!-- ==================================
+                     RECENTLY VIEWED
+                ================================== -->
+
+                <section
+                    class="recently-viewed-section"
+                    id="recently-viewed-section"
+                >
+
+                    <div class="cart-subheading">
+
+                        <p>
+                            YOUR BEAUTY DISCOVERY
+                        </p>
+
+                        <h2>
+                            Recently Viewed
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="recommendation-grid"
+                        id="recently-viewed-grid"
+                    >
+                    </div>
+
+                </section>
 
             </div>
 
 
 
-            <!-- ORDER SUMMARY -->
+            <!-- ======================================
+                 ORDER SUMMARY
+            ====================================== -->
 
             <aside class="cart-summary">
+
+                <p class="cart-summary-eyebrow">
+                    YOUR ORDER
+                </p>
 
                 <h2>
                     Order Summary
@@ -268,12 +520,37 @@
                 </div>
 
 
+
+                <!-- M-PESA -->
+                <div class="mpesa-highlight">
+
+                    <span class="mpesa-icon">
+                        M
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            M-Pesa available
+                        </strong>
+
+                        <p>
+                            Pay easily using M-Pesa at checkout.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHECKOUT -->
                 <a
                     href="checkout.html"
                     class="checkout-btn"
                     id="checkout-btn"
                 >
-                    Proceed to Checkout
+                    PROCEED TO CHECKOUT →
                 </a>
 
 
@@ -290,7 +567,7 @@
                     🔒
 
                     <span>
-                        Secure checkout
+                        Secure & private checkout
                     </span>
 
                 </div>
@@ -305,83 +582,9 @@
 
 
 
-<!-- ================= WHY SHOP ================= -->
-
-<section class="cart-benefits">
-
-    <div class="container benefits-grid">
-
-
-        <div class="cart-benefit">
-
-            <span>
-                🚚
-            </span>
-
-            <div>
-
-                <strong>
-                    Convenient Delivery
-                </strong>
-
-                <p>
-                    We make getting your beauty products easy.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="cart-benefit">
-
-            <span>
-                💳
-            </span>
-
-            <div>
-
-                <strong>
-                    Secure Payments
-                </strong>
-
-                <p>
-                    Safe and convenient payment options.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="cart-benefit">
-
-            <span>
-                ✨
-            </span>
-
-            <div>
-
-                <strong>
-                    Quality Products
-                </strong>
-
-                <p>
-                    Beauty products selected with care.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer class="footer">
 
@@ -513,7 +716,9 @@
 
 
 
-<!-- ================= WHATSAPP ================= -->
+<!-- ==================================================
+     WHATSAPP
+================================================== -->
 
 <a
     href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20need%20help%20with%20my%20order."
@@ -535,14 +740,16 @@
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script>
 
 
-/* =========================
+/* ==================================================
    MOBILE MENU
-   ========================= */
+================================================== */
 
 const menuBtn =
     document.getElementById("menu-btn");
@@ -566,20 +773,25 @@ if (menuBtn && navbar) {
 
 
 
-/* =========================
-   CURRENT YEAR
-   ========================= */
+/* ==================================================
+   YEAR
+================================================== */
 
-document.getElementById(
-    "current-year"
-).textContent =
-    new Date().getFullYear();
+const currentYear =
+    document.getElementById("current-year");
+
+if (currentYear) {
+
+    currentYear.textContent =
+        new Date().getFullYear();
+
+}
 
 
 
-/* =========================
-   CART ELEMENTS
-   ========================= */
+/* ==================================================
+   ELEMENTS
+================================================== */
 
 const cartItems =
     document.getElementById("cart-items");
@@ -596,30 +808,81 @@ const subtotalElement =
 const totalElement =
     document.getElementById("total");
 
+const deliveryElement =
+    document.getElementById("delivery");
+
 const cartCount =
     document.getElementById("cart-count");
 
+const checkoutButton =
+    document.getElementById("checkout-btn");
+
+const freeDeliveryMessage =
+    document.getElementById(
+        "free-delivery-message"
+    );
+
+const freeDeliveryProgress =
+    document.getElementById(
+        "free-delivery-progress"
+    );
+
+const recommendationGrid =
+    document.getElementById(
+        "recommendation-grid"
+    );
+
+const recentlyViewedGrid =
+    document.getElementById(
+        "recently-viewed-grid"
+    );
 
 
-/* =========================
-   GET CART
-   ========================= */
+
+/* ==================================================
+   SETTINGS
+================================================== */
+
+/*
+ * Change this amount whenever you want.
+ *
+ * Example:
+ * KSh 5,000 = free delivery.
+ */
+
+const FREE_DELIVERY_THRESHOLD =
+    5000;
+
+
+
+/* ==================================================
+   CART
+================================================== */
 
 function getCart() {
 
-    return JSON.parse(
-        localStorage.getItem(
-            "faithLuxeCart"
-        )
-    ) || [];
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                "faithLuxeCart"
+            )
+        ) || [];
+
+    } catch (error) {
+
+        console.error(
+            "Unable to read cart:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
 
-
-/* =========================
-   SAVE CART
-   ========================= */
 
 function saveCart(cart) {
 
@@ -632,9 +895,63 @@ function saveCart(cart) {
 
 
 
-/* =========================
+/* ==================================================
+   ESCAPE HTML
+================================================== */
+
+function escapeHtml(value) {
+
+    return String(value ?? "")
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
+
+}
+
+
+
+/* ==================================================
+   PRODUCT IMAGE
+================================================== */
+
+function getProductImage(item) {
+
+    return (
+        item.image ||
+        item.imageUrl ||
+        item.productImage ||
+        ""
+    );
+
+}
+
+
+
+/* ==================================================
    DISPLAY CART
-   ========================= */
+================================================== */
 
 function displayCart() {
 
@@ -642,11 +959,7 @@ function displayCart() {
         getCart();
 
 
-    /*
-       Check if cart is empty.
-    */
-
-    if (cart.length === 0) {
+    if (!cart.length) {
 
         emptyCart.style.display =
             "block";
@@ -656,6 +969,12 @@ function displayCart() {
 
         cartCount.textContent =
             "0";
+
+        updateFreeDelivery(0);
+
+        loadRecommendations();
+
+        loadRecentlyViewed();
 
         return;
 
@@ -678,23 +997,31 @@ function displayCart() {
     let itemCount = 0;
 
 
-
     cart.forEach(
         (item, index) => {
 
+            const price =
+                Number(item.price) || 0;
+
+            const quantity =
+                Math.max(
+                    1,
+                    Number(item.quantity) || 1
+                );
 
             const itemTotal =
-                item.price *
-                item.quantity;
+                price * quantity;
 
 
             subtotal +=
                 itemTotal;
 
-
             itemCount +=
-                item.quantity;
+                quantity;
 
+
+            const image =
+                getProductImage(item);
 
 
             const cartItem =
@@ -711,9 +1038,24 @@ function displayCart() {
 
                 <div class="cart-product-image">
 
-                    <span>
-                        ${item.category || "Beauty"}
-                    </span>
+                    ${
+                        image
+                            ? `
+                                <img
+                                    src="${escapeHtml(image)}"
+                                    alt="${escapeHtml(item.name || "Beauty product")}"
+                                    loading="lazy"
+                                >
+                              `
+                            : `
+                                <span>
+                                    ${escapeHtml(
+                                        item.category ||
+                                        "Beauty"
+                                    )}
+                                </span>
+                              `
+                    }
 
                 </div>
 
@@ -721,15 +1063,34 @@ function displayCart() {
                 <div class="cart-product-info">
 
                     <p class="cart-product-category">
-                        ${item.category || "Beauty"}
+                        ${escapeHtml(
+                            item.category ||
+                            "Beauty"
+                        )}
                     </p>
 
+
                     <h3>
-                        ${item.name}
+                        ${escapeHtml(
+                            item.name ||
+                            "Beauty Product"
+                        )}
                     </h3>
 
+
+                    ${
+                        item.variant
+                            ? `
+                                <p class="cart-product-variant">
+                                    ${escapeHtml(item.variant)}
+                                </p>
+                              `
+                            : ""
+                    }
+
+
                     <p class="cart-product-price">
-                        KSh ${item.price.toLocaleString()}
+                        KSh ${price.toLocaleString()}
                     </p>
 
 
@@ -740,17 +1101,21 @@ function displayCart() {
 
                             <button
                                 type="button"
+                                aria-label="Decrease quantity"
                                 onclick="changeQuantity(${index}, -1)"
                             >
                                 −
                             </button>
 
+
                             <span>
-                                ${item.quantity}
+                                ${quantity}
                             </span>
+
 
                             <button
                                 type="button"
+                                aria-label="Increase quantity"
                                 onclick="changeQuantity(${index}, 1)"
                             >
                                 +
@@ -789,11 +1154,6 @@ function displayCart() {
     );
 
 
-
-    /* =========================
-       TOTALS
-       ========================= */
-
     subtotalElement.textContent =
         `KSh ${subtotal.toLocaleString()}`;
 
@@ -802,18 +1162,80 @@ function displayCart() {
         `KSh ${subtotal.toLocaleString()}`;
 
 
+    deliveryElement.textContent =
+        subtotal >= FREE_DELIVERY_THRESHOLD
+            ? "FREE"
+            : "Calculated at checkout";
+
+
     cartCount.textContent =
         itemCount;
+
+
+    updateFreeDelivery(subtotal);
+
+    loadRecommendations();
+
+    loadRecentlyViewed();
 
 }
 
 
 
-/* =========================
-   CHANGE QUANTITY
-   ========================= */
+/* ==================================================
+   FREE DELIVERY
+================================================== */
 
-function changeQuantity(
+function updateFreeDelivery(subtotal) {
+
+    if (
+        subtotal >=
+        FREE_DELIVERY_THRESHOLD
+    ) {
+
+        freeDeliveryMessage.textContent =
+            "You've unlocked FREE delivery! 🚚";
+
+
+        freeDeliveryProgress.style.width =
+            "100%";
+
+        return;
+
+    }
+
+
+    const remaining =
+        FREE_DELIVERY_THRESHOLD -
+        subtotal;
+
+
+    const percentage =
+        Math.min(
+            100,
+            (subtotal /
+                FREE_DELIVERY_THRESHOLD) *
+                100
+        );
+
+
+    freeDeliveryMessage.textContent =
+        `Add KSh ${remaining.toLocaleString()} more for FREE delivery 🚚`;
+
+
+    freeDeliveryProgress.style.width =
+        `${percentage}%`;
+
+}
+
+
+
+/* ==================================================
+   CHANGE QUANTITY
+================================================== */
+
+window.changeQuantity =
+function (
     index,
     change
 ) {
@@ -827,19 +1249,30 @@ function changeQuantity(
     }
 
 
-    cart[index].quantity +=
+    const currentQuantity =
+        Number(
+            cart[index].quantity
+        ) || 1;
+
+
+    const newQuantity =
+        currentQuantity +
         change;
 
 
-    /*
-       Don't allow quantity below 1.
-    */
-
     if (
-        cart[index].quantity <= 0
+        newQuantity <= 0
     ) {
 
-        cart.splice(index, 1);
+        cart.splice(
+            index,
+            1
+        );
+
+    } else {
+
+        cart[index].quantity =
+            newQuantity;
 
     }
 
@@ -848,15 +1281,16 @@ function changeQuantity(
 
     displayCart();
 
-}
+};
 
 
 
-/* =========================
+/* ==================================================
    REMOVE ITEM
-   ========================= */
+================================================== */
 
-function removeItem(index) {
+window.removeItem =
+function(index) {
 
     const cart =
         getCart();
@@ -877,55 +1311,475 @@ function removeItem(index) {
 
     displayCart();
 
+};
+
+
+
+/* ==================================================
+   CLEAR CART
+================================================== */
+
+const clearCartButton =
+    document.getElementById(
+        "clear-cart"
+    );
+
+
+if (clearCartButton) {
+
+    clearCartButton.addEventListener(
+        "click",
+        () => {
+
+            const cart =
+                getCart();
+
+
+            if (!cart.length) {
+                return;
+            }
+
+
+            const confirmed =
+                confirm(
+                    "Are you sure you want to clear your cart?"
+                );
+
+
+            if (!confirmed) {
+                return;
+            }
+
+
+            localStorage.removeItem(
+                "faithLuxeCart"
+            );
+
+
+            displayCart();
+
+        }
+    );
+
 }
 
 
 
-/* =========================
-   CLEAR CART
-   ========================= */
+/* ==================================================
+   CHECKOUT
+================================================== */
 
-document.getElementById(
-    "clear-cart"
-).addEventListener(
-    "click",
-    () => {
+if (checkoutButton) {
 
-        const cart =
-            getCart();
+    checkoutButton.addEventListener(
+        "click",
+        event => {
+
+            const cart =
+                getCart();
 
 
-        if (cart.length === 0) {
-            return;
+            if (!cart.length) {
+
+                event.preventDefault();
+
+                alert(
+                    "Your cart is empty."
+                );
+
+                return;
+
+            }
+
         }
+    );
+
+}
 
 
-        const confirmed =
-            confirm(
-                "Are you sure you want to clear your cart?"
-            );
+
+/* ==================================================
+   RECOMMENDATION STORAGE
+================================================== */
+
+function getRecentlyViewed() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                "faithLuxeRecentlyViewed"
+            )
+        ) || [];
+
+    } catch (error) {
+
+        return [];
+
+    }
+
+}
 
 
-        if (!confirmed) {
-            return;
-        }
+
+/* ==================================================
+   RECOMMENDATION PRODUCTS
+================================================== */
+
+function getStoredProducts() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                "faithLuxeProducts"
+            )
+        ) || [];
+
+    } catch (error) {
+
+        return [];
+
+    }
+
+}
 
 
-        localStorage.removeItem(
-            "faithLuxeCart"
+
+/* ==================================================
+   ADD RECOMMENDED PRODUCT
+================================================== */
+
+function addRecommendedProduct(product) {
+
+    const cart =
+        getCart();
+
+
+    const existingIndex =
+        cart.findIndex(
+            item =>
+                String(item.id || item.productId) ===
+                String(product.id || product.productId)
         );
 
 
-        displayCart();
+    if (
+        existingIndex >= 0
+    ) {
+
+        cart[existingIndex].quantity =
+            (Number(
+                cart[existingIndex].quantity
+            ) || 1) + 1;
+
+    } else {
+
+        cart.push({
+
+            id:
+                product.id,
+
+            name:
+                product.name,
+
+            price:
+                Number(product.price) || 0,
+
+            category:
+                product.category || "Beauty",
+
+            image:
+                product.image ||
+                product.imageUrl ||
+                "",
+
+            quantity:
+                1
+
+        });
 
     }
-);
+
+
+    saveCart(cart);
+
+    displayCart();
+
+}
 
 
 
-/* =========================
+/* ==================================================
+   PRODUCT CARD
+================================================== */
+
+function createRecommendationCard(
+    product
+) {
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "recommendation-card";
+
+
+    const image =
+        getProductImage(product);
+
+
+    card.innerHTML = `
+
+        <div class="recommendation-image">
+
+            ${
+                image
+                    ? `
+                        <img
+                            src="${escapeHtml(image)}"
+                            alt="${escapeHtml(product.name || "Beauty product")}"
+                            loading="lazy"
+                        >
+                      `
+                    : `
+                        <span>
+                            ${escapeHtml(
+                                product.category ||
+                                "Beauty"
+                            )}
+                        </span>
+                      `
+            }
+
+        </div>
+
+
+        <div class="recommendation-content">
+
+            <p>
+                ${escapeHtml(
+                    product.category ||
+                    "Beauty"
+                )}
+            </p>
+
+
+            <h3>
+                ${escapeHtml(
+                    product.name ||
+                    "Beauty Product"
+                )}
+            </h3>
+
+
+            <strong>
+                KSh ${
+                    Number(
+                        product.price || 0
+                    ).toLocaleString()
+                }
+            </strong>
+
+
+            <button
+                type="button"
+                class="recommendation-add"
+            >
+                Add to Bag
+            </button>
+
+        </div>
+
+    `;
+
+
+    const addButton =
+        card.querySelector(
+            ".recommendation-add"
+        );
+
+
+    addButton.addEventListener(
+        "click",
+        () => {
+
+            addRecommendedProduct(
+                product
+            );
+
+        }
+    );
+
+
+    return card;
+
+}
+
+
+
+/* ==================================================
+   LOAD RECOMMENDATIONS
+================================================== */
+
+function loadRecommendations() {
+
+    if (!recommendationGrid) {
+        return;
+    }
+
+
+    recommendationGrid.innerHTML =
+        "";
+
+
+    const cart =
+        getCart();
+
+
+    const cartIds =
+        cart.map(
+            item =>
+                String(
+                    item.id ||
+                    item.productId ||
+                    ""
+                )
+        );
+
+
+    let products =
+        getStoredProducts();
+
+
+    products =
+        products.filter(
+            product =>
+                !cartIds.includes(
+                    String(
+                        product.id ||
+                        product.productId ||
+                        ""
+                    )
+                )
+        );
+
+
+    /*
+     * If products were stored by another page,
+     * use them.
+     *
+     * Otherwise the recommendation area
+     * remains hidden rather than showing fake
+     * products.
+     */
+
+    if (!products.length) {
+
+        recommendationGrid.innerHTML =
+            `
+                <div class="recommendations-empty">
+                    <p>
+                        Explore our shop for more beauty favorites.
+                    </p>
+
+                    <a
+                        href="shop.html"
+                        class="recommendation-shop-btn"
+                    >
+                        Explore Shop →
+                    </a>
+                </div>
+            `;
+
+        return;
+
+    }
+
+
+    products
+        .slice(0, 4)
+        .forEach(
+            product => {
+
+                recommendationGrid.appendChild(
+                    createRecommendationCard(
+                        product
+                    )
+                );
+
+            }
+        );
+
+}
+
+
+
+/* ==================================================
+   LOAD RECENTLY VIEWED
+================================================== */
+
+function loadRecentlyViewed() {
+
+    if (!recentlyViewedGrid) {
+        return;
+    }
+
+
+    const products =
+        getRecentlyViewed();
+
+
+    if (!products.length) {
+
+        document
+            .getElementById(
+                "recently-viewed-section"
+            )
+            .style.display =
+            "none";
+
+        return;
+
+    }
+
+
+    document
+        .getElementById(
+            "recently-viewed-section"
+        )
+        .style.display =
+        "block";
+
+
+    recentlyViewedGrid.innerHTML =
+        "";
+
+
+    products
+        .slice(0, 4)
+        .forEach(
+            product => {
+
+                recentlyViewedGrid.appendChild(
+                    createRecommendationCard(
+                        product
+                    )
+                );
+
+            }
+        );
+
+}
+
+
+
+/* ==================================================
    INITIALIZE
-   ========================= */
+================================================== */
 
 displayCart();
 
