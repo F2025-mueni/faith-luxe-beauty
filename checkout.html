@@ -17,15 +17,104 @@
         content="Complete your order at Faith Luxe Beauty."
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .payment-note {
+            margin-top: 10px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: #fff7f1;
+            color: #6b4a3b;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .mpesa-phone-group {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .mpesa-phone-group.show {
+            display: block;
+        }
+
+        .mpesa-phone-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .mpesa-phone-group input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font: inherit;
+            box-sizing: border-box;
+        }
+
+        .checkout-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .payment-status {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f8f4f0;
+            text-align: center;
+        }
+
+        .payment-status.show {
+            display: block;
+        }
+
+        .payment-status.success {
+            background: #edf9f0;
+            color: #236b35;
+        }
+
+        .payment-status.error {
+            background: #fff0f0;
+            color: #9b3030;
+        }
+
+        .payment-status strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .place-order-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+    </style>
 
 </head>
 
@@ -33,22 +122,34 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header class="header">
 
     <div class="container nav-container">
 
-        <a href="index.html" class="logo">
+        <a
+            href="index.html"
+            class="logo"
+        >
 
-            <span>Faith</span>
+            <span>
+                Faith
+            </span>
 
-            <strong>Luxe Beauty</strong>
+            <strong>
+                Luxe Beauty
+            </strong>
 
         </a>
 
 
-        <nav class="navbar" id="navbar">
+        <nav
+            class="navbar"
+            id="navbar"
+        >
 
             <a href="index.html">
                 Home
@@ -60,6 +161,10 @@
 
             <a href="index.html#categories">
                 Categories
+            </a>
+
+            <a href="index.html#featured">
+                Featured
             </a>
 
             <a href="index.html#about">
@@ -78,7 +183,9 @@
             <a
                 href="cart.html"
                 class="cart-btn"
+                aria-label="Shopping cart"
             >
+
                 🛒
 
                 <span id="cart-count">
@@ -89,6 +196,7 @@
 
 
             <button
+                type="button"
                 class="menu-btn"
                 id="menu-btn"
                 aria-label="Open menu"
@@ -104,7 +212,9 @@
 
 
 
-<!-- ================= CHECKOUT HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section class="checkout-hero">
 
@@ -128,18 +238,21 @@
 
 
 
-<!-- ================= CHECKOUT ================= -->
+<!-- ==================================================
+     CHECKOUT
+================================================== -->
 
 <main class="checkout-section">
 
     <div class="container">
 
 
-        <!-- EMPTY CART MESSAGE -->
+        <!-- EMPTY CART -->
 
         <div
             class="checkout-empty"
             id="checkout-empty"
+            style="display:none;"
         >
 
             <div>
@@ -173,7 +286,9 @@
         >
 
 
-            <!-- ================= CUSTOMER DETAILS ================= -->
+            <!-- ======================================
+                 FORM
+            ====================================== -->
 
             <section class="checkout-form-section">
 
@@ -256,7 +371,7 @@
                                 type="tel"
                                 id="phone"
                                 name="phone"
-                                placeholder="+254 7XX XXX XXX"
+                                placeholder="07XXXXXXXX"
                                 required
                             >
 
@@ -282,7 +397,7 @@
 
 
 
-                    <!-- LOCATION -->
+                    <!-- DELIVERY -->
 
                     <div class="checkout-section-heading second-heading">
 
@@ -303,7 +418,6 @@
                         </div>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -350,6 +464,18 @@
                                 Kisumu
                             </option>
 
+                            <option value="Meru">
+                                Meru
+                            </option>
+
+                            <option value="Tharaka-Nithi">
+                                Tharaka-Nithi
+                            </option>
+
+                            <option value="Embu">
+                                Embu
+                            </option>
+
                             <option value="Other">
                                 Other
                             </option>
@@ -357,7 +483,6 @@
                         </select>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -370,12 +495,11 @@
                             id="address"
                             name="address"
                             rows="3"
-                            placeholder="Enter your delivery address, estate, building, street, etc."
+                            placeholder="Estate, building, street, town, etc."
                             required
                         ></textarea>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -395,7 +519,7 @@
 
 
 
-                    <!-- ================= PAYMENT ================= -->
+                    <!-- PAYMENT -->
 
                     <div class="checkout-section-heading second-heading">
 
@@ -416,7 +540,6 @@
                         </div>
 
                     </div>
-
 
 
                     <div class="payment-methods">
@@ -446,7 +569,7 @@
                                 </strong>
 
                                 <small>
-                                    Pay securely using M-PESA
+                                    Receive an M-PESA payment prompt
                                 </small>
 
                             </span>
@@ -517,6 +640,55 @@
 
                         </label>
 
+                    </div>
+
+
+
+                    <!-- MPESA PHONE -->
+
+                    <div
+                        class="mpesa-phone-group show"
+                        id="mpesa-phone-group"
+                    >
+
+                        <label for="mpesa-phone">
+                            M-PESA Phone Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mpesa-phone"
+                            name="mpesaPhone"
+                            placeholder="07XXXXXXXX or 2547XXXXXXXX"
+                            autocomplete="tel"
+                        >
+
+                        <div class="payment-note">
+
+                            📱 After you place the order,
+                            an M-PESA payment prompt will be sent
+                            to this number.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STATUS -->
+
+                    <div
+                        class="payment-status"
+                        id="payment-status"
+                    >
+
+                        <strong id="payment-status-title">
+                            Processing...
+                        </strong>
+
+                        <span id="payment-status-message">
+                            Please wait.
+                        </span>
 
                     </div>
 
@@ -564,7 +736,9 @@
 
 
 
-            <!-- ================= ORDER SUMMARY ================= -->
+            <!-- ======================================
+                 SUMMARY
+            ====================================== -->
 
             <aside class="checkout-summary">
 
@@ -577,9 +751,6 @@
                     id="checkout-items"
                     class="checkout-items"
                 >
-
-                    <!-- Products inserted by JavaScript -->
-
                 </div>
 
 
@@ -649,7 +820,9 @@
 
 
 
-<!-- ================= ORDER SUCCESS ================= -->
+<!-- ==================================================
+     ORDER SUCCESS
+================================================== -->
 
 <div
     class="order-success-overlay"
@@ -702,12 +875,13 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer class="footer">
 
     <div class="container footer-grid">
-
 
         <div class="footer-brand">
 
@@ -814,7 +988,9 @@
 
 
 
-<!-- ================= WHATSAPP ================= -->
+<!-- ==================================================
+     WHATSAPP
+================================================== -->
 
 <a
     href="https://wa.me/254717311417?text=Hello%20Faith%20Luxe%20Beauty%2C%20I%20need%20help%20with%20my%20order."
@@ -836,14 +1012,66 @@
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
-<script>
+<script type="module">
+
+/* ==================================================
+   FIREBASE
+================================================== */
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp
+}
+from
+"https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 
-/* =========================
+import {
+    app
+}
+from
+"./firebase-config.js";
+
+
+const db = getFirestore(app);
+
+
+/* ==================================================
+   M-PESA BACKEND
+================================================== */
+
+/*
+ * IMPORTANT:
+ *
+ * Your Node.js backend is running locally
+ * on port 3000.
+ *
+ * Keep the Node.js PowerShell window running
+ * while testing M-Pesa.
+ */
+
+const MPESA_API_URL =
+    "http://localhost:3000/api/mpesa/stkpush";
+
+
+/* ==================================================
+   DELIVERY SETTINGS
+================================================== */
+
+const FREE_DELIVERY_THRESHOLD = 5000;
+
+const STANDARD_DELIVERY_FEE = 200;
+
+
+/* ==================================================
    MOBILE MENU
-   ========================= */
+================================================== */
 
 const menuBtn =
     document.getElementById("menu-btn");
@@ -866,71 +1094,91 @@ if (menuBtn && navbar) {
 }
 
 
-
-/* =========================
+/* ==================================================
    YEAR
-   ========================= */
+================================================== */
 
-document.getElementById(
-    "current-year"
-).textContent =
-    new Date().getFullYear();
+const currentYear =
+    document.getElementById("current-year");
 
+if (currentYear) {
 
-
-/* =========================
-   GET CART
-   ========================= */
-
-function getCart() {
-
-    return JSON.parse(
-        localStorage.getItem(
-            "faithLuxeCart"
-        )
-    ) || [];
+    currentYear.textContent =
+        new Date().getFullYear();
 
 }
 
 
-
-/* =========================
+/* ==================================================
    CART
-   ========================= */
+================================================== */
 
-const cart =
-    getCart();
+function getCart() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                "faithLuxeCart"
+            )
+        ) || [];
+
+    } catch (error) {
+
+        console.error(
+            "Unable to read cart:",
+            error
+        );
+
+        return [];
+
+    }
+
+}
 
 
+let cart = getCart();
 
-/* =========================
+
+/* ==================================================
    ELEMENTS
-   ========================= */
+================================================== */
 
 const checkoutLayout =
     document.getElementById(
         "checkout-layout"
     );
 
+
 const checkoutEmpty =
     document.getElementById(
         "checkout-empty"
     );
+
 
 const checkoutItems =
     document.getElementById(
         "checkout-items"
     );
 
+
 const subtotalElement =
     document.getElementById(
         "checkout-subtotal"
     );
 
+
+const deliveryElement =
+    document.getElementById(
+        "checkout-delivery"
+    );
+
+
 const totalElement =
     document.getElementById(
         "checkout-total"
     );
+
 
 const cartCount =
     document.getElementById(
@@ -938,20 +1186,203 @@ const cartCount =
     );
 
 
+const checkoutForm =
+    document.getElementById(
+        "checkout-form"
+    );
 
-/* =========================
-   CHECK CART
-   ========================= */
 
-if (cart.length === 0) {
+const placeOrderButton =
+    document.getElementById(
+        "place-order-btn"
+    );
 
-    checkoutLayout.style.display =
-        "none";
 
-    checkoutEmpty.style.display =
-        "block";
+const mpesaPhoneGroup =
+    document.getElementById(
+        "mpesa-phone-group"
+    );
 
-} else {
+
+const mpesaPhone =
+    document.getElementById(
+        "mpesa-phone"
+    );
+
+
+const paymentStatus =
+    document.getElementById(
+        "payment-status"
+    );
+
+
+const paymentStatusTitle =
+    document.getElementById(
+        "payment-status-title"
+    );
+
+
+const paymentStatusMessage =
+    document.getElementById(
+        "payment-status-message"
+    );
+
+
+/* ==================================================
+   ESCAPE HTML
+================================================== */
+
+function escapeHtml(value) {
+
+    return String(value ?? "")
+
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+/* ==================================================
+   PRODUCT IMAGE
+================================================== */
+
+function getProductImage(item) {
+
+    return (
+        item.image ||
+        item.imageUrl ||
+        item.productImage ||
+        ""
+    );
+
+}
+
+
+/* ==================================================
+   DELIVERY
+================================================== */
+
+function calculateDelivery(subtotal) {
+
+    if (
+        subtotal >=
+        FREE_DELIVERY_THRESHOLD
+    ) {
+
+        return 0;
+
+    }
+
+    return STANDARD_DELIVERY_FEE;
+
+}
+
+
+/* ==================================================
+   NORMALIZE M-PESA PHONE
+================================================== */
+
+function normalizeMpesaPhone(phone) {
+
+    let value =
+        String(phone || "")
+            .replace(/\s+/g, "")
+            .replace(/-/g, "");
+
+
+    if (
+        value.startsWith("+254")
+    ) {
+
+        value =
+            value.substring(1);
+
+    }
+
+
+    if (
+        value.startsWith("07") ||
+        value.startsWith("01")
+    ) {
+
+        value =
+            "254" +
+            value.substring(1);
+
+    }
+
+
+    if (
+        !/^254(7|1)\d{8}$/.test(
+            value
+        )
+    ) {
+
+        return null;
+
+    }
+
+
+    return value;
+
+}
+
+
+/* ==================================================
+   PAYMENT STATUS
+================================================== */
+
+function showPaymentStatus(
+    title,
+    message,
+    type = ""
+) {
+
+    paymentStatus.className =
+        "payment-status show " +
+        type;
+
+    paymentStatusTitle.textContent =
+        title;
+
+    paymentStatusMessage.textContent =
+        message;
+
+}
+
+
+function hidePaymentStatus() {
+
+    paymentStatus.className =
+        "payment-status";
+
+}
+
+
+/* ==================================================
+   DISPLAY CHECKOUT
+================================================== */
+
+function displayCheckout() {
+
+    if (!cart.length) {
+
+        checkoutLayout.style.display =
+            "none";
+
+        checkoutEmpty.style.display =
+            "block";
+
+        cartCount.textContent =
+            "0";
+
+        return;
+
+    }
+
 
     checkoutEmpty.style.display =
         "none";
@@ -959,30 +1390,36 @@ if (cart.length === 0) {
     checkoutLayout.style.display =
         "grid";
 
-}
 
+    checkoutItems.innerHTML =
+        "";
 
-
-/* =========================
-   DISPLAY ORDER
-   ========================= */
-
-function displayCheckout() {
 
     let subtotal = 0;
 
     let quantity = 0;
 
 
-    checkoutItems.innerHTML =
-        "";
-
-
     cart.forEach(item => {
 
+        const price =
+            Number(
+                item.price || 0
+            );
+
+
+        const itemQuantity =
+            Math.max(
+                1,
+                Number(
+                    item.quantity
+                ) || 1
+            );
+
+
         const itemTotal =
-            item.price *
-            item.quantity;
+            price *
+            itemQuantity;
 
 
         subtotal +=
@@ -990,13 +1427,15 @@ function displayCheckout() {
 
 
         quantity +=
-            item.quantity;
+            itemQuantity;
+
+
+        const image =
+            getProductImage(item);
 
 
         const itemElement =
-            document.createElement(
-                "div"
-            );
+            document.createElement("div");
 
 
         itemElement.className =
@@ -1007,9 +1446,32 @@ function displayCheckout() {
 
             <div class="checkout-item-image">
 
-                <span>
-                    ${item.category || "Beauty"}
-                </span>
+                ${
+                    image
+
+                    ? `
+
+                        <img
+                            src="${escapeHtml(image)}"
+                            alt="${escapeHtml(
+                                item.name ||
+                                "Beauty product"
+                            )}"
+                        >
+
+                    `
+
+                    : `
+
+                        <span>
+                            ${escapeHtml(
+                                item.category ||
+                                "Beauty"
+                            )}
+                        </span>
+
+                    `
+                }
 
             </div>
 
@@ -1017,11 +1479,14 @@ function displayCheckout() {
             <div class="checkout-item-info">
 
                 <strong>
-                    ${item.name}
+                    ${escapeHtml(
+                        item.name ||
+                        "Product"
+                    )}
                 </strong>
 
                 <small>
-                    Qty: ${item.quantity}
+                    Qty: ${itemQuantity}
                 </small>
 
             </div>
@@ -1029,7 +1494,8 @@ function displayCheckout() {
 
             <strong class="checkout-item-price">
 
-                KSh ${itemTotal.toLocaleString()}
+                KSh
+                ${itemTotal.toLocaleString()}
 
             </strong>
 
@@ -1043,13 +1509,29 @@ function displayCheckout() {
     });
 
 
+    const delivery =
+        calculateDelivery(
+            subtotal
+        );
+
+
+    const total =
+        subtotal +
+        delivery;
+
 
     subtotalElement.textContent =
         `KSh ${subtotal.toLocaleString()}`;
 
 
+    deliveryElement.textContent =
+        delivery === 0
+            ? "FREE"
+            : `KSh ${delivery.toLocaleString()}`;
+
+
     totalElement.textContent =
-        `KSh ${subtotal.toLocaleString()}`;
+        `KSh ${total.toLocaleString()}`;
 
 
     cartCount.textContent =
@@ -1058,25 +1540,211 @@ function displayCheckout() {
 }
 
 
+/* ==================================================
+   PAYMENT METHOD
+================================================== */
 
-/* =========================
-   FORM
-   ========================= */
+document
+    .querySelectorAll(
+        'input[name="payment"]'
+    )
+    .forEach(input => {
 
-const checkoutForm =
-    document.getElementById(
-        "checkout-form"
-    );
+        input.addEventListener(
+            "change",
+            () => {
 
+                const selected =
+                    document.querySelector(
+                        'input[name="payment"]:checked'
+                    )?.value;
+
+
+                if (
+                    selected === "mpesa"
+                ) {
+
+                    mpesaPhoneGroup
+                        .classList
+                        .add("show");
+
+                    mpesaPhone.required =
+                        true;
+
+                } else {
+
+                    mpesaPhoneGroup
+                        .classList
+                        .remove("show");
+
+                    mpesaPhone.required =
+                        false;
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* ==================================================
+   BUILD ORDER
+================================================== */
+
+function buildOrder(
+    formData,
+    paymentMethod,
+    mpesaNumber,
+    subtotal,
+    delivery,
+    total,
+    orderNumber
+) {
+
+    const firstName =
+        String(
+            formData.get("firstName") || ""
+        ).trim();
+
+
+    const lastName =
+        String(
+            formData.get("lastName") || ""
+        ).trim();
+
+
+    const phone =
+        String(
+            formData.get("phone") || ""
+        ).trim();
+
+
+    const email =
+        String(
+            formData.get("email") || ""
+        ).trim();
+
+
+    const county =
+        String(
+            formData.get("county") || ""
+        ).trim();
+
+
+    const address =
+        String(
+            formData.get("address") || ""
+        ).trim();
+
+
+    const deliveryNotes =
+        String(
+            formData.get("deliveryNotes") || ""
+        ).trim();
+
+
+    const items =
+        cart.map(item => ({
+
+            id:
+                item.id ||
+                item.productId ||
+                "",
+
+            name:
+                item.name ||
+                "",
+
+            price:
+                Number(
+                    item.price || 0
+                ),
+
+            quantity:
+                Math.max(
+                    1,
+                    Number(
+                        item.quantity
+                    ) || 1
+                ),
+
+            category:
+                item.category ||
+                "",
+
+            image:
+                getProductImage(item)
+
+        }));
+
+
+    return {
+
+        orderNumber,
+
+        customerName:
+            `${firstName} ${lastName}`.trim(),
+
+        firstName,
+
+        lastName,
+
+        phone,
+
+        email,
+
+        county,
+
+        address,
+
+        deliveryNotes,
+
+        items,
+
+        subtotal,
+
+        delivery,
+
+        total,
+
+        paymentMethod,
+
+        mpesaPhone:
+            mpesaNumber || "",
+
+        paymentStatus:
+            paymentMethod === "mpesa"
+                ? "Awaiting M-Pesa payment"
+                : "Pending",
+
+        status:
+            "Processing",
+
+        createdAt:
+            serverTimestamp()
+
+    };
+
+}
+
+
+/* ==================================================
+   PLACE ORDER
+================================================== */
 
 checkoutForm.addEventListener(
     "submit",
-    function(event) {
+    async event => {
 
         event.preventDefault();
 
 
-        if (cart.length === 0) {
+        cart =
+            getCart();
+
+
+        if (!cart.length) {
 
             alert(
                 "Your cart is empty."
@@ -1087,172 +1755,571 @@ checkoutForm.addEventListener(
         }
 
 
-        /* =====================
-           FORM DATA
-           ===================== */
-
         const formData =
             new FormData(
                 checkoutForm
             );
 
 
-        const customer = {
-
-            firstName:
-                formData.get(
-                    "firstName"
-                ),
-
-            lastName:
-                formData.get(
-                    "lastName"
-                ),
-
-            phone:
-                formData.get(
-                    "phone"
-                ),
-
-            email:
-                formData.get(
-                    "email"
-                ),
-
-            county:
-                formData.get(
-                    "county"
-                ),
-
-            address:
-                formData.get(
-                    "address"
-                ),
-
-            deliveryNotes:
-                formData.get(
-                    "deliveryNotes"
-                ),
-
-            payment:
+        const paymentMethod =
+            String(
                 formData.get(
                     "payment"
-                )
-
-        };
-
-
-        /* =====================
-           CREATE ORDER NUMBER
-           ===================== */
-
-        const orderNumber =
-            "FLB-" +
-            Date.now()
-                .toString()
-                .slice(-6);
+                ) || "mpesa"
+            );
 
 
-        /* =====================
+        let mpesaNumber = null;
+
+
+        /* ==========================================
+           M-PESA VALIDATION
+        ========================================== */
+
+        if (
+            paymentMethod === "mpesa"
+        ) {
+
+            mpesaNumber =
+                normalizeMpesaPhone(
+                    formData.get(
+                        "mpesaPhone"
+                    )
+                );
+
+
+            if (!mpesaNumber) {
+
+                alert(
+                    "Please enter a valid Kenyan M-PESA number, for example 0712345678."
+                );
+
+                mpesaPhone.focus();
+
+                return;
+
+            }
+
+        }
+
+
+        /* ==========================================
            CALCULATE TOTAL
-           ===================== */
+        ========================================== */
 
         const subtotal =
             cart.reduce(
-                (total, item) =>
-                    total +
-                    (
-                        item.price *
-                        item.quantity
-                    ),
+                (
+                    sum,
+                    item
+                ) => {
+
+                    const price =
+                        Number(
+                            item.price || 0
+                        );
+
+
+                    const quantity =
+                        Math.max(
+                            1,
+                            Number(
+                                item.quantity
+                            ) || 1
+                        );
+
+
+                    return sum +
+                        (
+                            price *
+                            quantity
+                        );
+
+                },
                 0
             );
 
 
-        /* =====================
-           TEMPORARY ORDER
-           ===================== */
-
-        const order = {
-
-            orderNumber:
-
-                orderNumber,
-
-            customer:
-
-                customer,
-
-            items:
-
-                cart,
-
-            subtotal:
-
-                subtotal,
-
-            total:
-
-                subtotal,
-
-            createdAt:
-
-                new Date()
-                    .toISOString()
-
-        };
+        const delivery =
+            calculateDelivery(
+                subtotal
+            );
 
 
-        /*
-           Temporary local storage.
-
-           Later this will be replaced by
-           Firebase Firestore.
-        */
-
-        localStorage.setItem(
-            "faithLuxeLastOrder",
-            JSON.stringify(order)
-        );
+        const total =
+            subtotal +
+            delivery;
 
 
-        /* =====================
-           CLEAR CART
-           ===================== */
+        if (
+            total <= 0
+        ) {
 
-        localStorage.removeItem(
-            "faithLuxeCart"
-        );
+            alert(
+                "Your order total must be greater than zero."
+            );
 
+            return;
 
-        /* =====================
-           SHOW SUCCESS
-           ===================== */
-
-        document.getElementById(
-            "order-number"
-        ).textContent =
-            orderNumber;
+        }
 
 
-        document.getElementById(
-            "order-success"
-        ).classList.add(
-            "show"
-        );
+        /* ==========================================
+           DISABLE BUTTON
+        ========================================== */
 
+        placeOrderButton.disabled =
+            true;
+
+
+        placeOrderButton.textContent =
+            "Processing...";
+
+
+        hidePaymentStatus();
+
+
+        try {
+
+            /* ======================================
+               ORDER NUMBER
+            ====================================== */
+
+            const orderNumber =
+                "FLB-" +
+                Date.now()
+                    .toString()
+                    .slice(-6);
+
+
+            /* ======================================
+               WHATSAPP
+            ====================================== */
+
+            if (
+                paymentMethod === "whatsapp"
+            ) {
+
+                const customerName =
+                    `${formData.get("firstName")} ${formData.get("lastName")}`;
+
+
+                const itemsText =
+                    cart
+                        .map(
+                            item =>
+                                `${item.name} x${item.quantity}`
+                        )
+                        .join(", ");
+
+
+                const message =
+                    `Hello Faith Luxe Beauty.%0A%0A` +
+                    `Order: ${orderNumber}%0A` +
+                    `Customer: ${encodeURIComponent(customerName)}%0A` +
+                    `Phone: ${encodeURIComponent(formData.get("phone"))}%0A` +
+                    `Items: ${encodeURIComponent(itemsText)}%0A` +
+                    `Total: KSh ${total.toLocaleString()}%0A%0A` +
+                    `I would like to confirm this order.`;
+
+
+                window.open(
+                    `https://wa.me/254717311417?text=${message}`,
+                    "_blank"
+                );
+
+
+                const order =
+                    buildOrder(
+                        formData,
+                        paymentMethod,
+                        "",
+                        subtotal,
+                        delivery,
+                        total,
+                        orderNumber
+                    );
+
+
+                const reference =
+                    await addDoc(
+                        collection(
+                            db,
+                            "orders"
+                        ),
+                        order
+                    );
+
+
+                localStorage.removeItem(
+                    "faithLuxeCart"
+                );
+
+
+                localStorage.setItem(
+                    "faithLuxeLastOrder",
+                    JSON.stringify({
+
+                        ...order,
+
+                        firestoreId:
+                            reference.id,
+
+                        createdAt:
+                            new Date()
+                                .toISOString()
+
+                    })
+                );
+
+
+                showSuccess(
+                    orderNumber
+                );
+
+
+                return;
+
+            }
+
+
+            /* ======================================
+               CASH ON DELIVERY
+            ====================================== */
+
+            if (
+                paymentMethod === "cash"
+            ) {
+
+                const order =
+                    buildOrder(
+                        formData,
+                        paymentMethod,
+                        "",
+                        subtotal,
+                        delivery,
+                        total,
+                        orderNumber
+                    );
+
+
+                const reference =
+                    await addDoc(
+                        collection(
+                            db,
+                            "orders"
+                        ),
+                        order
+                    );
+
+
+                localStorage.removeItem(
+                    "faithLuxeCart"
+                );
+
+
+                localStorage.setItem(
+                    "faithLuxeLastOrder",
+                    JSON.stringify({
+
+                        ...order,
+
+                        firestoreId:
+                            reference.id,
+
+                        createdAt:
+                            new Date()
+                                .toISOString()
+
+                    })
+                );
+
+
+                showSuccess(
+                    orderNumber
+                );
+
+
+                return;
+
+            }
+
+
+            /* ======================================
+               M-PESA
+            ====================================== */
+
+            if (
+                paymentMethod === "mpesa"
+            ) {
+
+                showPaymentStatus(
+
+                    "Sending M-PESA prompt...",
+
+                    "Please wait. Your phone will receive an M-PESA prompt."
+
+                );
+
+
+                console.log(
+                    "Calling M-Pesa backend:",
+                    MPESA_API_URL
+                );
+
+
+                const response =
+                    await fetch(
+                        MPESA_API_URL,
+                        {
+
+                            method:
+                                "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "application/json"
+
+                            },
+
+                            body:
+                                JSON.stringify({
+
+                                    phone:
+                                        mpesaNumber,
+
+                                    amount:
+                                        Math.ceil(
+                                            total
+                                        ),
+
+                                    orderNumber:
+                                        orderNumber
+
+                                })
+
+                        }
+                    );
+
+
+                let result = null;
+
+
+                try {
+
+                    result =
+                        await response.json();
+
+                } catch {
+
+                    result = {};
+
+                }
+
+
+                console.log(
+                    "M-Pesa backend response:",
+                    result
+                );
+
+
+                if (
+                    !response.ok
+                ) {
+
+                    throw new Error(
+
+                        result.message ||
+
+                        "M-PESA payment request failed."
+
+                    );
+
+                }
+
+
+                if (
+                    !result.success
+                ) {
+
+                    throw new Error(
+
+                        result.message ||
+
+                        "M-PESA could not start."
+
+                    );
+
+                }
+
+
+                /* ==================================
+                   STK PUSH SENT
+                ================================== */
+
+                showPaymentStatus(
+
+                    "Check your phone 📱",
+
+                    "Enter your M-PESA PIN on your phone to complete payment."
+
+                );
+
+
+                const order =
+                    buildOrder(
+                        formData,
+                        paymentMethod,
+                        mpesaNumber,
+                        subtotal,
+                        delivery,
+                        total,
+                        orderNumber
+                    );
+
+
+                const reference =
+                    await addDoc(
+                        collection(
+                            db,
+                            "orders"
+                        ),
+                        {
+
+                            ...order,
+
+                            checkoutRequestId:
+                                result.checkoutRequestId ||
+                                "",
+
+                            merchantRequestId:
+                                result.merchantRequestId ||
+                                ""
+
+                        }
+                    );
+
+
+                localStorage.setItem(
+                    "faithLuxeLastOrder",
+                    JSON.stringify({
+
+                        ...order,
+
+                        firestoreId:
+                            reference.id,
+
+                        createdAt:
+                            new Date()
+                                .toISOString()
+
+                    })
+                );
+
+
+                /*
+                 * Clear cart only after
+                 * STK Push was successfully started.
+                 */
+
+                localStorage.removeItem(
+                    "faithLuxeCart"
+                );
+
+
+                cart = [];
+
+
+                placeOrderButton.textContent =
+                    "Payment Prompt Sent";
+
+
+                placeOrderButton.disabled =
+                    true;
+
+
+                return;
+
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "CHECKOUT ERROR:",
+                error
+            );
+
+
+            console.error(
+                "ERROR CODE:",
+                error.code
+            );
+
+
+            console.error(
+                "ERROR MESSAGE:",
+                error.message
+            );
+
+
+            showPaymentStatus(
+
+                "Payment could not be started",
+
+                error.message ||
+                "Please try again.",
+
+                "error"
+
+            );
+
+
+            placeOrderButton.disabled =
+                false;
+
+
+            placeOrderButton.innerHTML =
+                `
+                Place Order
+                <span>→</span>
+                `;
+
+        }
 
     }
 );
 
 
+/* ==================================================
+   SUCCESS
+================================================== */
 
-/* =========================
+function showSuccess(
+    orderNumber
+) {
+
+    document.getElementById(
+        "order-number"
+    ).textContent =
+        orderNumber;
+
+
+    document.getElementById(
+        "order-success"
+    ).classList.add(
+        "show"
+    );
+
+}
+
+
+/* ==================================================
    INITIALIZE
-   ========================= */
+================================================== */
 
 displayCheckout();
-
 
 </script>
 
